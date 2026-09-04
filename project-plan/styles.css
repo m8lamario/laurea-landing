@@ -1,0 +1,400 @@
+:root {
+  --red: #cf342f;
+  --red-soft: #e8a19a;
+  --cream: #f7f1e7;
+  --paper: #fffaf2;
+  --ink: #22201d;
+  --muted: #756f67;
+  --line: rgba(207, 52, 47, 0.45);
+  --max-width: 1080px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Courier Prime", "Courier New", monospace;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+a {
+  color: inherit;
+}
+
+main {
+  overflow: hidden;
+}
+
+.hero {
+  min-height: 92vh;
+  display: grid;
+  place-items: center;
+  padding: 48px 20px;
+}
+
+.hero__inner {
+  width: min(100%, 820px);
+  background: var(--paper);
+  border: 1.5px solid var(--red);
+  outline: 1px solid var(--ink);
+  outline-offset: -18px;
+  padding: 88px 72px;
+  text-align: center;
+  position: relative;
+}
+
+.medical-mark {
+  color: var(--red);
+  font-size: 72px;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--red);
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+}
+
+h1,
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  color: var(--red);
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+h1 span {
+  display: block;
+  margin-top: 16px;
+  color: var(--ink);
+  font-size: clamp(1rem, 2.5vw, 1.55rem);
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.date-code {
+  display: inline-grid;
+  grid-template-columns: repeat(6, 42px);
+  margin-top: 38px;
+  border: 1px solid var(--red);
+}
+
+.date-code span {
+  display: grid;
+  place-items: center;
+  height: 42px;
+  border-right: 1px solid var(--red);
+  font-size: 1.2rem;
+}
+
+.date-code span:last-child {
+  border-right: 0;
+}
+
+.accent-cell {
+  background: rgba(207, 52, 47, 0.12);
+}
+
+.date-label {
+  color: var(--red);
+  margin: 10px 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero__intro {
+  max-width: 580px;
+  margin: 34px auto 0;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 13px 20px 11px;
+  background: var(--red);
+  color: white;
+  text-decoration: none;
+  border: 1px solid var(--red);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.82rem;
+  transition: 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+.button--outline {
+  background: transparent;
+  color: var(--red);
+}
+
+.section {
+  width: min(calc(100% - 40px), var(--max-width));
+  margin: 0 auto;
+  padding: 88px 0;
+}
+
+.prescription-card {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  background: var(--paper);
+  border: 1px solid var(--red);
+  min-height: 360px;
+}
+
+.prescription-side {
+  background: var(--red);
+  color: white;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.prescription-content {
+  padding: 48px;
+}
+
+.rx-line {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  border-bottom: 1px solid var(--red);
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+  font-size: clamp(1.15rem, 2.4vw, 1.6rem);
+}
+
+.rx {
+  color: var(--red);
+  font-size: 2.4rem;
+}
+
+.prescription-content p {
+  line-height: 1.95;
+  margin: 0;
+  background-image: linear-gradient(to bottom, transparent 95%, var(--line) 95%);
+  background-size: 100% 1.95em;
+}
+
+.doctor-box {
+  border: 1px solid var(--red);
+  margin-top: 42px;
+  min-height: 110px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+}
+
+.doctor-box__label {
+  position: absolute;
+  top: -9px;
+  background: var(--paper);
+  padding: 0 10px;
+  color: var(--red);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.67rem;
+  font-weight: 700;
+}
+
+.signature {
+  font-family: "Lindsey Signature", "Braisetto", "Brush Script MT", cursive;
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+}
+
+.dedication {
+  text-align: center;
+  max-width: 760px;
+}
+
+.dedication h2,
+.section-heading h2,
+.album-card h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1;
+}
+
+.dedication > p:last-child,
+.section-heading > p:last-child,
+.album-card > p {
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 680px;
+  margin: 22px auto 0;
+}
+
+.section-heading {
+  margin-bottom: 34px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 240px;
+  gap: 14px;
+}
+
+.gallery-item {
+  margin: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(207,52,47,.08), rgba(207,52,47,.02));
+  border: 1px solid rgba(207,52,47,.22);
+}
+
+.gallery-item--wide {
+  grid-column: span 2;
+}
+
+.gallery-item--tall {
+  grid-row: span 2;
+}
+
+.album-card {
+  border-top: 1px solid var(--red);
+  border-bottom: 1px solid var(--red);
+  padding: 58px 0;
+  text-align: center;
+}
+
+footer {
+  padding: 50px 20px 70px;
+  text-align: center;
+  color: var(--red);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.footer-small {
+  color: var(--muted);
+  font-weight: 400;
+  text-transform: none;
+  margin-top: 10px;
+  font-family: "Courier Prime", "Courier New", monospace;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: auto;
+    padding-top: 20px;
+  }
+
+  .hero__inner {
+    padding: 72px 28px 58px;
+    outline-offset: -12px;
+  }
+
+  .medical-mark {
+    font-size: 58px;
+  }
+
+  .date-code {
+    grid-template-columns: repeat(6, 36px);
+  }
+
+  .date-code span {
+    height: 36px;
+  }
+
+  .section {
+    width: min(calc(100% - 28px), var(--max-width));
+    padding: 64px 0;
+  }
+
+  .prescription-card {
+    grid-template-columns: 44px 1fr;
+  }
+
+  .prescription-content {
+    padding: 30px 22px;
+  }
+
+  .prescription-content p {
+    font-size: 0.9rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 210px;
+  }
+
+  .gallery-item--wide {
+    grid-column: span 2;
+  }
+
+  .gallery-item--tall {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 460px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 240px;
+  }
+
+  .gallery-item--wide {
+    grid-column: span 1;
+  }
+
+  .prescription-card {
+    grid-template-columns: 36px 1fr;
+  }
+
+  .prescription-side {
+    font-size: 0.73rem;
+  }
+
+  .prescription-content {
+    padding: 28px 18px;
+  }
+
+  .rx-line {
+    gap: 10px;
+  }
+
+  .rx {
+    font-size: 2rem;
+  }
+}

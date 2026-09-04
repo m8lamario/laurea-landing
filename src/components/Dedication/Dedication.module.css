@@ -1,0 +1,46 @@
+.dedication {
+  padding: clamp(64px, 10vw, 110px) clamp(20px, 4vw, 32px);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.inner {
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: clamp(0.72rem, 1.8vw, 0.8rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-red);
+}
+
+.title {
+  font-family: var(--font-sans);
+  font-size: clamp(1.8rem, 4.5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--color-red);
+  letter-spacing: 0.02em;
+}
+
+.divider {
+  width: 48px;
+  height: 1px;
+  background-color: var(--color-red);
+  margin: 6px 0;
+  opacity: 0.6;
+}
+
+.text {
+  font-size: clamp(1rem, 2.4vw, 1.15rem);
+  line-height: 1.8;
+  color: var(--color-ink);
+}

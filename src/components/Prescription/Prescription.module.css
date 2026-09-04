@@ -1,0 +1,184 @@
+.section {
+  padding: clamp(48px, 8vw, 88px) clamp(16px, 4vw, 32px);
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: min(100%, 780px);
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-red);
+  box-shadow: 0 6px 24px rgba(23, 21, 19, 0.04);
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+}
+
+.sideHeader {
+  background-color: var(--color-red);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.28em;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+  text-transform: uppercase;
+}
+
+.content {
+  padding: clamp(28px, 6vw, 54px) clamp(20px, 5vw, 48px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--color-red-border);
+  padding-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.prescriptionMeta {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-red);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Priority box easter egg U B D P */
+.priorityBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-ink-muted);
+}
+
+.priorityItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.priorityChecked {
+  color: var(--color-red);
+  font-weight: 700;
+}
+
+.priorityMeaning {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--color-red);
+  text-transform: uppercase;
+  margin-left: 2px;
+}
+
+.rxLine {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  border-bottom: 2px solid var(--color-red);
+  padding-bottom: 10px;
+}
+
+.rxSymbol {
+  font-family: var(--font-sans);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: var(--color-red);
+  line-height: 1;
+}
+
+.rxItem {
+  font-family: var(--font-mono);
+  font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-ink);
+}
+
+.instructions {
+  font-size: clamp(0.92rem, 2vw, 1.02rem);
+  line-height: 1.75;
+  color: var(--color-ink);
+}
+
+.instructions p {
+  margin-bottom: 10px;
+}
+
+.instructions p:last-child {
+  margin-bottom: 0;
+}
+
+.doctorBox {
+  align-self: flex-end;
+  margin-top: 16px;
+  border: 1px dashed var(--color-red);
+  padding: 16px 24px;
+  text-align: center;
+  min-width: 250px;
+  max-width: 100%;
+  background: rgba(215, 53, 48, 0.02);
+}
+
+.doctorLabel {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-red);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.doctorSignature {
+  display: block;
+  font-family: var(--font-signature);
+  font-size: 1.9rem;
+  line-height: 1.2;
+  color: var(--color-ink);
+  transform: rotate(-2deg);
+}
+
+@media (max-width: 540px) {
+  .card {
+    grid-template-columns: 42px 1fr;
+  }
+
+  .sideHeader {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+  }
+
+  .content {
+    padding: 24px 16px;
+    gap: 18px;
+  }
+
+  .doctorBox {
+    align-self: stretch;
+    min-width: 0;
+    padding: 14px 16px;
+  }
+
+  .doctorSignature {
+    font-size: 1.6rem;
+  }
+}
