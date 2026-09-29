@@ -25,7 +25,7 @@ const caveat = Caveat({
 
 export const metadata: Metadata = {
   title: 'Mariagrazia — Laurea in Medicina e Chirurgia',
-  description: 'Prescrizione speciale e archivio ricordi della laurea in Medicina e Chirurgia di Mariagrazia Mottola.',
+  description: 'Laurea in Medicina e Chirurgia di Mariagrazia Mottola.',
   robots: {
     index: false,
     follow: false,

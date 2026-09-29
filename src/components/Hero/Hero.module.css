@@ -112,7 +112,7 @@
 }
 
 .accentCell {
-  background-color: rgba(215, 53, 48, 0.12);
+  background-color: rgba(130, 36, 52, 0.12);
   color: var(--color-red);
 }
 
@@ -162,9 +162,9 @@
 
 .ctaButton:hover,
 .ctaButton:focus-visible {
-  background-color: #be2823;
+  background-color: #822434;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(215, 53, 48, 0.25);
+  box-shadow: 0 4px 12px rgba(130, 36, 52, 0.25);
   outline: none;
 }
 

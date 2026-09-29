@@ -1,9 +1,9 @@
 :root {
   /* Colors */
-  --color-red: #D73530;
-  --color-red-soft: #E9A19B;
-  --color-red-tint: rgba(215, 53, 48, 0.08);
-  --color-red-border: rgba(215, 53, 48, 0.35);
+  --color-red: #822434;
+  --color-red-soft: #C18C99;
+  --color-red-tint: rgba(130, 36, 52, 0.08);
+  --color-red-border: rgba(130, 36, 52, 0.35);
   --color-ivory: #F8F3E9;
   --color-paper: #FFFDF9;
   --color-paper-muted: #F2ECE0;

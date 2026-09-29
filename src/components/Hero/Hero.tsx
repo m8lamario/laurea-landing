@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './Hero.module.css';
 import { siteConfig } from '@/data/gallery';
 
@@ -6,28 +7,16 @@ export default function Hero() {
   return (
     <section className={styles.hero} aria-label="Introduzione">
       <div className={styles.card}>
-        {/* Caduceus Symbol (SVG) */}
         <div className={styles.caduceus} aria-hidden="true">
-          <svg
+          <Image
+            src="/logo/Bastone.svg"
+            alt=""
+            width={52}
+            height={52}
             className={styles.caduceusSvg}
-            viewBox="0 0 48 54"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            {/* Asclepius Staff and Snake Motif */}
-            <line x1="24" y1="2" x2="24" y2="52" strokeWidth="2.4" />
-            <circle cx="24" cy="4" r="3.2" fill="currentColor" />
-            <path
-              d="M14 14 C14 8, 34 8, 34 16 C34 24, 14 22, 14 30 C14 38, 34 36, 34 44 C34 48, 26 49, 24 50"
-              strokeWidth="2"
-            />
-          </svg>
+            priority
+          />
         </div>
-
-        <p className={styles.eyebrow}>Prescrizione speciale</p>
 
         <div className={styles.titleGroup}>
           <h1 className={styles.degreeTitle}>
