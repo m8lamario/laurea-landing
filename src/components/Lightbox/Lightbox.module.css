@@ -65,36 +65,6 @@
   user-select: none;
 }
 
-.infoBar {
-  margin-top: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 88vw;
-  color: #fffaf2;
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  letter-spacing: 0.04em;
-}
-
-.caption {
-  color: #f8f3e9;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  padding-right: 12px;
-}
-
-.counter {
-  font-family: var(--font-sans);
-  color: var(--color-red-soft);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  font-size: 0.85rem;
-  flex-shrink: 0;
-}
-
 .closeButton {
   position: fixed;
   top: clamp(16px, 3vw, 28px);
@@ -169,9 +139,5 @@
 
   .activeImage {
     max-height: 74vh;
-  }
-
-  .infoBar {
-    font-size: 0.75rem;
   }
 }

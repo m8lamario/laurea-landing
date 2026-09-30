@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '@/components/Hero/Hero';
 import Dedication from '@/components/Dedication/Dedication';
+import Gallery from '@/components/Gallery/Gallery';
 import Footer from '@/components/Footer/Footer';
 import RevealOnScroll from '@/components/RevealOnScroll';
 import styles from './page.module.css';
@@ -10,6 +11,7 @@ export default function Home() {
     <main className={styles.main}>
       <Hero />
       <div className={styles.sectionDivider} aria-hidden="true" />
+      <Gallery />
       <RevealOnScroll>
         <Dedication />
       </RevealOnScroll>

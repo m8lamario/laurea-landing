@@ -25,6 +25,15 @@
   margin: 2px 0 8px;
 }
 
+.signature {
+  width: min(440px, 90vw);
+  height: auto;
+  aspect-ratio: 162.09 / 25.29;
+  object-fit: contain;
+  overflow: visible;
+  margin: 2px 0 0;
+}
+
 /* Authentic editorial barcode */
 .barcodeWrapper {
   display: flex;
@@ -45,15 +54,6 @@
   font-size: 0.68rem;
   letter-spacing: 0.2em;
   color: var(--color-ink-muted);
-}
-
-.validityBadge {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--color-red);
 }
 
 .subcopy {
