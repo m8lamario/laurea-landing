@@ -32,9 +32,6 @@ export const metadata: Metadata = {
     nocache: true,
     noarchive: true,
   },
-  icons: {
-    icon: '/favicon.ico',
-  },
 };
 
 export const viewport: Viewport = {
