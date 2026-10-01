@@ -30,14 +30,14 @@ export default function Gallery() {
       </header>
 
       <GalleryGroup
-        title="AMICI"
-        images={getAvailableImages(friendsGallery)}
-        albumUrl={GOOGLE_PHOTOS_FRIENDS_URL}
-      />
-      <GalleryGroup
         title="FAMIGLIA"
         images={getAvailableImages(familyGallery)}
         albumUrl={GOOGLE_PHOTOS_FAMILY_URL}
+      />
+      <GalleryGroup
+        title="AMICI"
+        images={getAvailableImages(friendsGallery)}
+        albumUrl={GOOGLE_PHOTOS_FRIENDS_URL}
       />
     </section>
   );

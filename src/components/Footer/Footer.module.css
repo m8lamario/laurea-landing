@@ -28,7 +28,7 @@
 .signature {
   width: min(440px, 90vw);
   height: auto;
-  aspect-ratio: 162.09 / 25.29;
+  aspect-ratio: 162.09 / 32.29;
   object-fit: contain;
   overflow: visible;
   margin: 2px 0 0;

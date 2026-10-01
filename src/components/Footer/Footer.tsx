@@ -14,7 +14,7 @@ export default function Footer() {
         src={signaturePath}
         alt={siteConfig.doctorName}
         width={162}
-        height={25}
+        height={32}
         className={styles.signature}
       />
 
