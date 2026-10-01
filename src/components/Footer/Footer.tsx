@@ -1,13 +1,22 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 import { siteConfig } from '@/data/gallery';
+
+const signaturePath = '/images/firma-digitale/firmamari.svg';
 
 export default function Footer() {
   return (
     <footer className={styles.footer} role="contentinfo">
       <div className={styles.date}>{siteConfig.dateDisplay}</div>
 
-      <div className={styles.doctorName}>{siteConfig.doctorName}</div>
+      <Image
+        src={signaturePath}
+        alt={siteConfig.doctorName}
+        width={162}
+        height={32}
+        className={styles.signature}
+      />
 
       {/* Barcode graphic */}
       <div className={styles.barcodeWrapper} aria-hidden="true">
@@ -46,10 +55,6 @@ export default function Footer() {
           <rect x="139" y="0" width="1" height="32" />
         </svg>
         <span className={styles.barcodeLabel}>* 29092026-MED *</span>
-      </div>
-
-      <div className={styles.validityBadge}>
-        Prescrizione digitale · Validità illimitata
       </div>
 
       <p className={styles.subcopy}>

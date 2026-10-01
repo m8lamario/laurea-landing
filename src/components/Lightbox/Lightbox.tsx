@@ -21,6 +21,7 @@ export default function Lightbox({
   const touchStartXRef = useRef<number | null>(null);
   const touchStartYRef = useRef<number | null>(null);
   const closeBtnRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
 
   const isOpen = currentIndex !== null;
   const currentImage = isOpen ? images[currentIndex] : null;
@@ -40,12 +41,25 @@ export default function Lightbox({
   useEffect(() => {
     if (!isOpen) return;
 
-    // Focus close button on open
+    const previouslyFocusedElement =
+      document.activeElement instanceof HTMLElement
+        ? document.activeElement
+        : null;
     closeBtnRef.current?.focus();
 
-    // Lock body scroll
     const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      if (previouslyFocusedElement?.isConnected) {
+        previouslyFocusedElement.focus();
+      }
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -54,12 +68,28 @@ export default function Lightbox({
         handleNext();
       } else if (e.key === 'ArrowLeft') {
         handlePrev();
+      } else if (e.key === 'Tab') {
+        const focusableElements = Array.from(
+          dialogRef.current?.querySelectorAll<HTMLButtonElement>(
+            'button:not([disabled])',
+          ) ?? [],
+        ).filter((element) => element.getClientRects().length > 0);
+        if (!focusableElements.length) return;
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        if (e.shiftKey && document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement.focus();
+        } else if (!e.shiftKey && document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement.focus();
+        }
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => {
-      document.body.style.overflow = originalOverflow;
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen, onClose, handleNext, handlePrev]);
@@ -91,6 +121,7 @@ export default function Lightbox({
 
   return (
     <div
+      ref={dialogRef}
       className={styles.overlay}
       onClick={onClose}
       role="dialog"
@@ -186,14 +217,6 @@ export default function Lightbox({
           />
         </div>
 
-        <div className={styles.infoBar}>
-          <span className={styles.caption}>
-            {currentImage.caption || currentImage.alt}
-          </span>
-          <span className={styles.counter}>
-            {currentIndex + 1} / {images.length}
-          </span>
-        </div>
       </div>
     </div>
   );

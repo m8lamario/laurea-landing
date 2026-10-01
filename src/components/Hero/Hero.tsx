@@ -50,7 +50,7 @@ export default function Hero() {
         <p className={styles.introText}>{siteConfig.introText}</p>
 
         <div className={styles.ctaWrapper}>
-          <a href="#gallery" className={styles.ctaButton}>
+          <a href="#archivio-ricordi" className={styles.ctaButton}>
             <span>Sfoglia i ricordi</span>
             <span className={styles.arrowIcon} aria-hidden="true">
               ↓

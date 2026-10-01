@@ -43,4 +43,5 @@
   font-size: clamp(1rem, 2.4vw, 1.15rem);
   line-height: 1.8;
   color: var(--color-ink);
+  white-space: pre-line;
 }
