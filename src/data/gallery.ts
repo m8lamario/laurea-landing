@@ -21,7 +21,7 @@ export const siteConfig = {
   introText:
     "Un traguardo importante, reso ancora più bello dalle persone che hanno condiviso il viaggio.",
   dedicationText:
-    "I traguardi più belli sono quelli che possiamo condividere. Questa pagina raccoglie i ricordi di una giornata indimenticabile e delle persone che l'hanno resa speciale.",
+    "I traguardi più belli acquistano valore grazie alle persone con cui possiamo condividerli.\nQuesta pagina raccoglie alcuni ricordi di un giorno speciale e li condivide con chi, da vicino o da lontano, ha fatto parte del percorso.",
   prescriptionRx: 'VINUM ROSATUM 750 ML',
   prescriptionIndications: [
     'Trattamento consigliato per festeggiamenti e traguardi memorabili.',
